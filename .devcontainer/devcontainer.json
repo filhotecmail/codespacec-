@@ -1,0 +1,19 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+	"name": "C++",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"packages": ["build-essential", "cmake", "gcc", "g++", "make"]
+		},
+		"ghcr.io/akhildevelops/devcontainer-features/apt:0": {
+			"packages": ["git"]
+		}		
+	},
+	"forwardPorts": [],
+	"postCreateCommand": "gcc -v",
+	"remoteUser": "vscode"
+}
